@@ -63,20 +63,20 @@ const CANDLE_COUNT = 5;
    ========================================================= */
 
 const PLAYLIST = [
-  { src: "music/01 Body to Body.mp3",                     title: "Body to Body" },
-  { src: "music/02 Hooligan.mp3",                         title: "Hooligan" },
-  { src: "music/03 Aliens.mp3",                           title: "Aliens" },
-  { src: "music/04 FYA.mp3",                              title: "FYA" },
-  { src: "music/05 2.0.mp3",                              title: "2.0" },
-  { src: "music/06 No. 29.mp3",                           title: "No. 29" },
-  { src: "music/07 SWIM.mp3",                             title: "SWIM" },
-  { src: "music/08 Merry Go Round.mp3",                   title: "Merry Go Round" },
-  { src: "music/09 NORMAL.mp3",                           title: "NORMAL" },
-  { src: "music/10 Like Animals.mp3",                     title: "Like Animals" },
-  { src: "music/11 they don_t know _bout us.mp3",         title: "They Don't Know 'Bout Us" },
-  { src: "music/12 One More Night.mp3",                   title: "One More Night" },
-  { src: "music/13 Please.mp3",                           title: "Please" },
-  { src: "music/14 Into the Sun.mp3",                     title: "Into the Sun" },
+  { src: "musics/01 Body to Body.mp3",                     title: "Body to Body" },
+  { src: "musics/02 Hooligan.mp3",                         title: "Hooligan" },
+  { src: "musics/03 Aliens.mp3",                           title: "Aliens" },
+  { src: "musics/04 FYA.mp3",                              title: "FYA" },
+  { src: "musics/05 2.0.mp3",                              title: "2.0" },
+  { src: "musics/06 No. 29.mp3",                           title: "No. 29" },
+  { src: "musics/07 SWIM.mp3",                             title: "SWIM" },
+  { src: "musics/08 Merry Go Round.mp3",                   title: "Merry Go Round" },
+  { src: "musics/09 NORMAL.mp3",                           title: "NORMAL" },
+  { src: "musics/10 Like Animals.mp3",                     title: "Like Animals" },
+  { src: "musics/11 they don_t know _bout us.mp3",         title: "They Don't Know 'Bout Us" },
+  { src: "musics/12 One More Night.mp3",                   title: "One More Night" },
+  { src: "musics/13 Please.mp3",                           title: "Please" },
+  { src: "musics/14 Into the Sun.mp3",                     title: "Into the Sun" },
 ];
 
 /* =========================================================
