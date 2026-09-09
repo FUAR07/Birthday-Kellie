@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Happy Birthday, Kellie! 🎂💕</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============================================= -->
+  <!-- FLOATING BACKGROUND (hearts + sparkles live here, injected by JS) -->
+  <!-- ============================================= -->
+  <div id="floating-bg" aria-hidden="true"></div>
+
+  <!-- ============================================= -->
+  <!-- FLOATING MUSIC PLAYER (visible everywhere once the surprise starts) -->
+  <!-- ============================================= -->
+  <div id="music-player" class="music-player hidden">
+    <div class="music-player-info">
+      <span class="music-note">🎵</span>
+      <span id="music-track-name" class="music-track-name">—</span>
+    </div>
+    <div class="music-player-controls">
+      <button id="music-prev" class="music-ctrl-btn" aria-label="Previous song" title="Previous song">⏮</button>
+      <button id="music-back10" class="music-ctrl-btn" aria-label="Back 10 seconds" title="Back 10 seconds">⏴10</button>
+      <button id="music-playpause" class="music-ctrl-btn music-ctrl-main" aria-label="Pause" title="Play / Pause">⏸</button>
+      <button id="music-fwd10" class="music-ctrl-btn" aria-label="Forward 10 seconds" title="Forward 10 seconds">10⏵</button>
+      <button id="music-next" class="music-ctrl-btn" aria-label="Next song" title="Next song">⏭</button>
+    </div>
+  </div>
+
+  <!-- ============================================= -->
+  <!-- PROGRESS INDICATOR -->
+  <!-- ============================================= -->
+  <nav id="progress-bar" class="progress-bar hidden" aria-label="Birthday journey progress">
+    <div class="progress-step" data-step="1">
+      <span class="progress-num">01</span>
+      <span class="progress-label">Make a Wish</span>
+    </div>
+    <div class="progress-line"></div>
+    <div class="progress-step" data-step="2">
+      <span class="progress-num">02</span>
+      <span class="progress-label">Memories</span>
+    </div>
+    <div class="progress-line"></div>
+    <div class="progress-step" data-step="3">
+      <span class="progress-num">03</span>
+      <span class="progress-label">Videos</span>
+    </div>
+    <div class="progress-line"></div>
+    <div class="progress-step" data-step="4">
+      <span class="progress-num">04</span>
+      <span class="progress-label">The Letter</span>
+    </div>
+  </nav>
+
+  <!-- ============================================= -->
+  <!-- INTRO SCREEN -->
+  <!-- ============================================= -->
+  <section id="intro-screen" class="screen active">
+    <div class="intro-illustration" aria-hidden="true">
+      <div class="cake-emoji-wrap">
+        <span class="floaty-emoji e1">🎈</span>
+        <span class="floaty-emoji e2">✨</span>
+        <span class="big-cake">🎂</span>
+        <span class="floaty-emoji e3">🎁</span>
+        <span class="floaty-emoji e4">💖</span>
+      </div>
+    </div>
+
+    <!-- EDIT HERE: change the intro headline text -->
+    <h1 class="intro-title">I made something just for you.</h1>
+    <!-- EDIT HERE: change the intro subtitle text -->
+    <p class="intro-subtitle">A little birthday adventure filled with memories, laughs, and surprises 💕</p>
+
+    <button id="open-surprise-btn" class="btn btn-primary btn-glow">
+      Open Your Surprise 🎁
+    </button>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- MAIN BIRTHDAY JOURNEY -->
+  <!-- ============================================= -->
+  <main id="journey" class="hidden">
+
+    <!-- SECTION 1: MAKE A WISH -->
+    <section id="section-wish" class="section active-section">
+      <div class="section-inner">
+        <p class="section-eyebrow">01 · Make a Wish</p>
+        <h2 class="section-title">Blow out the candles 🎂</h2>
+        <p class="section-subtitle">Klike sou chak grenn flame pou li ka komanse.</p>
+
+        <div class="cake-stage">
+          <div class="cake">
+            <div class="candles" id="candles-row">
+              <!-- candles injected via JS -->
+            </div>
+            <div class="cake-top"></div>
+            <div class="cake-drip"></div>
+            <div class="cake-middle"></div>
+            <div class="cake-bottom"></div>
+            <div class="cake-plate"></div>
+          </div>
+        </div>
+
+        <p id="wish-message" class="wish-message hidden">Wish made ✨ May this year surprise you in the best possible ways.</p>
+        <button id="wish-continue-btn" class="btn btn-secondary hidden">Continue the surprise ✨</button>
+      </div>
+    </section>
+
+    <!-- SECTION 2: PRETTY MEMORIES -->
+    <section id="section-memories" class="section">
+      <div class="section-inner">
+        <p class="section-eyebrow">02 · Pretty Memories</p>
+        <h2 class="section-title">Pretty Memories 📸</h2>
+        <p class="section-subtitle">A little scroll through some of the best snapshots.</p>
+
+        <div class="gallery" id="photo-gallery">
+          <!-- polaroid cards injected via JS -->
+        </div>
+
+        <button id="memories-continue-btn" class="btn btn-secondary">I like the album 📸</button>
+      </div>
+    </section>
+
+    <!-- SECTION 3: VIDEO EVIDENCE -->
+    <section id="section-videos" class="section">
+      <div class="section-inner">
+        <p class="section-eyebrow">03 · Video Evidence</p>
+        <h2 class="section-title">Video Evidence 🎬</h2>
+        <p class="section-subtitle">Some memories deserved more than just one frame 😂💕</p>
+
+        <div class="video-gallery" id="video-gallery">
+          <!-- video cards injected via JS -->
+        </div>
+
+        <button id="videos-continue-btn" class="btn btn-secondary">Continue the surprise ✨</button>
+      </div>
+    </section>
+
+    <!-- SECTION 4: A LITTLE LETTER -->
+    <section id="section-letter" class="section">
+      <div class="section-inner">
+        <p class="section-eyebrow">04 · A Little Letter</p>
+        <h2 class="section-title">A Little Letter 💌</h2>
+        <p class="section-subtitle">Tap the envelope when you're ready.</p>
+
+        <div class="envelope-stage">
+          <div class="envelope" id="envelope">
+            <div class="envelope-back"></div>
+            <div class="letter" id="letter-paper">
+              <p id="letter-text" class="letter-text"></p>
+            </div>
+            <div class="envelope-front"></div>
+            <div class="envelope-flap"></div>
+            <div class="envelope-seal">💕</div>
+          </div>
+          <p id="envelope-hint" class="envelope-hint">tap to open</p>
+        </div>
+
+        <button id="letter-continue-btn" class="btn btn-primary hidden">See the finale 🎉</button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================= -->
+  <!-- FINAL CELEBRATION SCREEN -->
+  <!-- ============================================= -->
+  <section id="final-screen" class="screen">
+    <div class="final-decor" aria-hidden="true">
+      <span class="balloon b1">🎈</span>
+      <span class="balloon b2">🎈</span>
+      <span class="balloon b3">🎈</span>
+      <span class="balloon b4">🎈</span>
+    </div>
+    <h1 class="final-title">HAPPY BIRTHDAY, KELLIE! 🎉</h1>
+    <p class="final-message">May this year bring you more memories worth saving, more reasons to laugh, and more moments that make you realize how loved you are.</p>
+    <br>
+    <p class="final-message">Made with care by Alexandre 💕</p>
+    <button id="restart-btn" class="btn btn-primary btn-glow">One More Time 🎁</button>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- CANVAS FOR CONFETTI -->
+  <!-- ============================================= -->
+  <canvas id="confetti-canvas" aria-hidden="true"></canvas>
+
+  <!-- ============================================= -->
+  <!-- LIGHTBOX MODAL FOR PHOTOS -->
+  <!-- ============================================= -->
+  <div id="lightbox" class="lightbox hidden">
+    <div class="lightbox-content">
+      <button id="lightbox-close" class="lightbox-close" aria-label="Close">✕</button>
+      <img id="lightbox-img" src="" alt="">
+      <p id="lightbox-caption" class="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <!-- ============================================= -->
+  <!-- BACKGROUND MUSIC — the whole album plays as one playlist -->
+  <!-- EDIT HERE: the file list lives in script.js under PLAYLIST -->
+  <!-- ============================================= -->
+  <audio id="album-audio" preload="none"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
