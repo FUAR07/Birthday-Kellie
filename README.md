@@ -1,10 +1,4 @@
-# Kellie's Birthday Site
-
-A cute, interactive birthday website. Plain HTML/CSS/JS — no frameworks, works on GitHub Pages.
-
-## 1. Add your files
-
-Drop your real files into these folders (names must match exactly):
+## 1. Add files
 
 ```
 photos/  → call.jpg, call2.jpg, cowboy.jpg, cute.jpg, face.jpg, fav.jpg, fit.jpg,
